@@ -1,1 +1,159 @@
-Part C - coming soon
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechNova &ndash; Summer Internships</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>TechNova &ndash; Summer Internships</h1>
+
+    <search>
+      <form action="https://httpbin.org/get" method="get">
+        <label for="search-input">Search TechNova</label>
+        <input type="search" id="search-input" name="q">
+        <button type="submit">Go</button>
+      </form>
+    </search>
+
+    <picture>
+      <source media="(min-width: 800px)" srcset="media/banner-1280.jpg">
+      <img src="media/banner-640.jpg"
+           alt="TechNova summer internship banner"
+           loading="lazy"
+           width="640" height="200">
+    </picture>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Presentation</h2>
+      <video controls
+             poster="media/poster.jpg"
+             width="640" height="360">
+        <source src="media/presentation.webm" type="video/webm">
+        <source src="media/presentation.mp4"  type="video/mp4">
+
+        <track kind="captions"
+               src="media/captions-en.vtt"
+               srclang="en"
+               label="English"
+               default>
+
+        <p>
+          Your browser cannot play this video.
+          <a href="media/presentation.mp4">Download the presentation</a>.
+        </p>
+      </video>
+    </section>
+
+    <section>
+      <h2>Availability</h2>
+
+      <p>
+        <label for="places-meter">Places taken:</label>
+        <meter id="places-meter" value="18" min="0" max="30">18 out of 30</meter>
+        <span>18 of 30 places taken</span>
+      </p>
+
+      <p>
+        <label for="campaign-progress">Campaign progress:</label>
+        <progress id="campaign-progress" value="40" max="100">40%</progress>
+        <span>Campaign: 40% elapsed</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Application</h2>
+
+      <form action="https://httpbin.org/post"
+            method="post"
+            enctype="multipart/form-data">
+
+        <p>
+          <label for="city-input">City:</label>
+          <input type="text" id="city-input" name="city" list="cities-list">
+          <datalist id="cities-list">
+            <option value="Algiers"></option>
+            <option value="Oran"></option>
+            <option value="Constantine"></option>
+            <option value="Annaba"></option>
+          </datalist>
+        </p>
+
+        <p>
+          <label for="speciality-select">Speciality:</label>
+          <select id="speciality-select" name="speciality" required>
+            <option value="" disabled selected>&mdash; Choose a Department &mdash;</option>
+            <optgroup label="Engineering">
+              <option value="software">Software Engineering</option>
+              <option value="hardware">Hardware Engineering</option>
+            </optgroup>
+            <optgroup label="Design">
+              <option value="ui">UI Design</option>
+              <option value="ux">UX Design</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <p>
+          <label for="cv-upload">Upload CV (PDF only):</label>
+          <input type="file" id="cv-upload" name="cv" accept=".pdf">
+        </p>
+
+        <p>
+          <label for="motivation-text">Motivation:</label>
+          <textarea id="motivation-text" name="motivation" rows="4" cols="40"></textarea>
+
+          <button type="button"
+                  popovertarget="help-popover"
+                  aria-label="Help about the motivation field">?</button>
+        </p>
+
+        <div id="help-popover" popover>
+          <p>Tell us in a few sentences why you want to join TechNova
+             and what you hope to learn during the internship.</p>
+        </div>
+
+        <input type="hidden" name="source" value="lab2">
+
+        <p>
+          <button type="submit">Apply</button>
+          <button type="submit"
+                  formnovalidate
+                  formaction="https://httpbin.org/anything">
+            Save draft
+          </button>
+        </p>
+
+      </form>
+    </section>
+
+    <section>
+      <h2>FAQ</h2>
+
+      <details name="faq" open>
+        <summary>What is TechNova?</summary>
+        <p>TechNova is a fictional company that offers summer internships
+           in engineering and design.</p>
+      </details>
+
+      <details name="faq">
+        <summary>How do I apply?</summary>
+        <p>Fill in the quick application form above and upload your CV as a PDF.</p>
+      </details>
+
+      <details name="faq">
+        <summary>What documents do I need?</summary>
+        <p>Only a PDF version of your CV is required.</p>
+      </details>
+    </section>
+
+  </main>
+</body>
+</html>
