@@ -1,0 +1,220 @@
+
+
+
+:root {
+  --color-primary: #17324D;
+  --color-accent: #267679;
+  --color-accent-light: hsl(182 40% 94%);
+  --color-bg: #F5F7FA;
+  --color-surface: #FFFFFF;
+  --color-text: #1F2933;
+  --color-muted: #52606D;
+  --color-highlight: #F0B429;
+  --radius: 8px;
+  --shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background-color: var(--color-bg);
+  font-family:   sans-serif;
+  color: var(--color-text);
+  line-height: 1.5;
+    margin: 0;
+
+}
+
+h1, h2 {
+  color: var(--color-primary);
+    margin-top: 0;
+
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-area h3 {
+  color: var(--color-surface);
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--color-surface);
+}
+
+nav a:hover, nav a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-light);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 2rem;
+  width: min(100% - 2rem, 70rem);
+  margin: 2rem auto;
+}
+
+.card {
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+figure {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+figure::after {
+  content: "48h";
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+  background-color: var(--color-highlight);
+  color: #000;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  font-weight: bold;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+figure figcaption {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.meta {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.schedule-table caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.schedule-table th, 
+.schedule-table td {
+  border: 1px solid var(--color-bg);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.schedule-table thead th {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background-color: var(--color-accent-light);
+}
+
+.prizes li::marker {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+blockquote {
+  border-left: 4px solid var(--color-accent);
+  background-color: var(--color-accent-light);
+  padding: 1rem;
+  margin: 2rem 0 0 0;
+}
+
+blockquote p {
+  margin: 0;
+  font-style: italic;
+}
+
+blockquote + p {
+  text-align: right;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.info-table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.info-table th {
+  text-align: left;
+  width: 30%;
+  padding: 0.25rem 0;
+}
+
+.info-table td {
+  padding: 0.25rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-primary);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-muted);
+}
